@@ -2,13 +2,15 @@
 	import MainNavigation from '../components/MainNavigation.svelte';
 	import LightboxSlider from '../components/LightboxSlider.svelte';
 	import { cart } from '../state/state.svelte';
+	import { base } from '$app/paths';
+
 	let itemQuantity = $state(1);
 
 	const handleAddToCart = () => {
 		// In a real environment, this would likely link to a product ID and not hardcoded data
 		cart.items.push({
 			title: 'Fall Limited Edition Sneakers',
-			img: '/images/image-product-1-thumbnail.jpg',
+			img: base + '/images/image-product-1-thumbnail.jpg',
 			price: 125,
 			quantity: itemQuantity
 		});
@@ -42,7 +44,7 @@
 						class="min-w-4 cursor-pointer px-4 py-4"
 						onclick={() => (itemQuantity -= 1)}
 					>
-						<img src="/images/icon-minus.svg" alt="reduce quantity by 1" class="w-4" />
+						<img src={base + '/images/icon-minus.svg'} alt="reduce quantity by 1" class="w-4" />
 					</button>
 					<input
 						type="number"
@@ -56,7 +58,7 @@
 						class="min-w-4 cursor-pointer px-4 py-4"
 						onclick={() => (itemQuantity += 1)}
 					>
-						<img src="/images/icon-plus.svg" alt="increase quantity by 1" class="w-4" />
+						<img src={base + '/images/icon-plus.svg'} alt="increase quantity by 1" class="w-4" />
 					</button>
 				</div>
 				<button

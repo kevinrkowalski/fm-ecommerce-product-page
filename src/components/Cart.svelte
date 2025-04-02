@@ -1,5 +1,6 @@
 <script>
 	import { cart } from '../state/state.svelte';
+	import { base } from '$app/paths';
 
 	const formatCurrency = (amount) =>
 		new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
@@ -31,13 +32,13 @@
 							</div>
 						</div>
 						<button class="cursor-pointer" onclick={() => handleItemDelete(item.title)}
-							><img src="/images/icon-delete.svg" alt="delete" /></button
+							><img src={base + '/images/icon-delete.svg'} alt="delete" /></button
 						>
 					</li>
 				{/each}
 			</ul>
 			<a
-				href="/"
+				href={base + '/'}
 				class="bg-orange hover:bg-pale-orange inline-block w-full rounded-lg p-4 text-center font-bold"
 				>Checkout</a
 			>

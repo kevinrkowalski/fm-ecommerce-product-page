@@ -1,24 +1,26 @@
 <script>
+	import { base } from '$app/paths';
+
 	let inactiveThumbnailClasses = 'relative overflow-hidden rounded-xl';
 	let activeThumbnailClasses =
 		' border-2 border-orange after:absolute after:top-0 after:left-0 after:block after:h-full after:w-full after:bg-white/70';
 	let activeImage = $state(0);
 	let images = [
 		{
-			src: '/images/image-product-1.jpg',
-			thumbnail: '/images/image-product-1-thumbnail.jpg'
+			src: base + '/images/image-product-1.jpg',
+			thumbnail: base + '/images/image-product-1-thumbnail.jpg'
 		},
 		{
-			src: '/images/image-product-2.jpg',
-			thumbnail: '/images/image-product-2-thumbnail.jpg'
+			src: base + '/images/image-product-2.jpg',
+			thumbnail: base + '/images/image-product-2-thumbnail.jpg'
 		},
 		{
-			src: '/images/image-product-3.jpg',
-			thumbnail: '/images/image-product-3-thumbnail.jpg'
+			src: base + '/images/image-product-3.jpg',
+			thumbnail: base + '/images/image-product-3-thumbnail.jpg'
 		},
 		{
-			src: '/images/image-product-4.jpg',
-			thumbnail: '/images/image-product-4-thumbnail.jpg'
+			src: base + '/images/image-product-4.jpg',
+			thumbnail: base + '/images/image-product-4-thumbnail.jpg'
 		}
 	];
 
@@ -39,7 +41,7 @@
 						activeImage = newActiveImageIndex < 0 ? images.length - 1 : newActiveImageIndex;
 					}}
 				>
-					<img src="/images/icon-previous.svg" alt="previous" />
+					<img src={base + '/images/icon-previous.svg'} alt="previous" />
 				</button>
 				<button
 					type="button"
@@ -49,7 +51,7 @@
 						activeImage = newActiveImageIndex === images.length ? 0 : newActiveImageIndex;
 					}}
 				>
-					<img src="/images/icon-next.svg" alt="next" />
+					<img src={base + '/images/icon-next.svg'} alt="next" />
 				</button>
 			</div>
 			<button onclick={() => dialog.showModal()} class="-mr-4 -ml-4 lg:mr-0 lg:ml-0">
