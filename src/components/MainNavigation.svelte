@@ -36,7 +36,7 @@
 	{#if windowSize.width > 1000 || showNav}
 		<div class="absolute top-0 left-0 z-10 block h-svh w-screen bg-black/80 lg:hidden"></div>
 		<div
-			class="absolute top-0 left-0 z-10 h-svh min-w-3/4 bg-white p-8 lg:static lg:flex lg:h-full lg:min-w-auto lg:items-center lg:p-0"
+			class="absolute top-0 -left-4 z-10 h-svh min-w-3/4 bg-white p-8 lg:static lg:flex lg:h-full lg:min-w-auto lg:items-center lg:p-0"
 		>
 			<button
 				type="button"
