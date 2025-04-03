@@ -25,7 +25,7 @@
 </script>
 
 <nav
-	class="border-b-grayish-blue flex items-center justify-between py-4 lg:h-28 lg:justify-normal lg:gap-12 lg:border-b lg:py-0"
+	class="border-b-grayish-blue relative flex items-center justify-between py-4 lg:h-28 lg:justify-normal lg:gap-12 lg:border-b lg:py-0"
 >
 	<div class="flex items-center gap-4">
 		<button type="button" onclick={() => (showNav = !showNav)} class="lg:hidden">

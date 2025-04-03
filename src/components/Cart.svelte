@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="fixed top-24 left-1/2 z-10 w-96 -translate-x-1/2 rounded-lg bg-white shadow-lg backdrop:hidden lg:absolute lg:top-full lg:left-0"
+	class="fixed top-24 left-1/2 z-10 w-96 -translate-x-1/2 rounded-lg bg-white shadow-lg backdrop:hidden lg:absolute lg:top-full lg:right-0 lg:left-auto lg:translate-x-2/6"
 >
 	<div class="border-b-grayish-blue border-b p-4">
 		<h2>Cart</h2>
